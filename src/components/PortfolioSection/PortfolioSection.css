@@ -1,0 +1,126 @@
+.portfolio-section {
+  padding: 70px 20px;
+  text-align: center;
+}
+.portfolio-section span {
+  color: #0056b3;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 4rem;
+}
+.section-heading {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 4;
+}
+
+.portfolio-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.portfolio-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  margin: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.portfolio-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.portfolio-title {
+  font-size: 1.2rem;
+  margin: 10px 10px;
+  color: black;
+  float: left;
+}
+
+.portfolio-description {
+  font-size: 1rem;
+  color: #555;
+  padding: 0 15px;
+  margin-bottom: 20px;
+}
+
+.portfolio-button {
+  background-color: #602cdf;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0 0 0 15px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin-left: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.portfolio-button:hover {
+  background-color: #0056b3;
+}
+
+.see-more-button {
+  background-color: #602cdf;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 0 0 20px 0;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-top: 40px;
+  transition: background-color 0.3s ease;
+}
+
+.see-more-button:hover {
+  background-color: #0056b3;
+}
+
+/* Hover effect */
+.portfolio-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 123, 255, 0.1);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 15px;
+}
+
+.portfolio-card:hover::after {
+  opacity: 1;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .portfolio-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .portfolio-card {
+    width: 80%;
+    margin: 20px 0;
+  }
+}

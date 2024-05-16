@@ -1,0 +1,120 @@
+.website-solutions-left-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 4%;
+  background-color: white;
+}
+#span {
+  color: #602cdf;
+  font-size: 14px;
+  font-weight: bold;
+}
+.content {
+  max-width: 600px;
+}
+
+.content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.solutions-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.solution-card {
+  flex: 1 1 calc(50% - 20px);
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 0 0 10px 0;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  font-weight: 550;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.solution-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #602cdf;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.solution-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px; /* Adjust the width as needed */
+  height: 100%;
+  background: #602cdf; /* Blue color */
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.solution-card:hover::before {
+  left: 0;
+}
+
+.solution-card:hover {
+  color: white;
+}
+
+.solution-card span,
+.solution-card h3,
+.solution-card p {
+  position: relative;
+  z-index: 3; /* Ensure text is above the pseudo-elements */
+}
+
+.solution-card.active {
+  background: linear-gradient(90deg, #602cdf, #7f82eb);
+  color: white;
+}
+
+.solution-card.active::before {
+  left: 0;
+}
+
+.solution-card.active:hover {
+  color: white;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .website-solutions-left-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .solutions-container {
+    justify-content: center;
+  }
+
+  .solution-card {
+    width: 100%;
+  }
+}

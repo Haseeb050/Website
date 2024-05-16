@@ -1,0 +1,43 @@
+.counter-section {
+  position: relative;
+  width: 100%;
+  padding: 50px 0;
+  background: url("../../../public/banner.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  text-align: center;
+}
+
+.counter-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.counter {
+  flex: 1 1 20%;
+  margin: 20px;
+}
+
+.counter h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.counter p {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .counter {
+    flex: 1 1 40%;
+  }
+}
+
+@media (max-width: 480px) {
+  .counter {
+    flex: 1 1 100%;
+  }
+}

@@ -1,0 +1,126 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px !important;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  margin-left: 5rem !important;
+  flex-grow: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-grow: 2;
+}
+
+.nav-links li {
+  padding: 0 23px;
+  padding-top: 15px !important;
+  position: relative;
+  transition: color 0.3s ease;
+  font-size: 16px;
+  font-weight: 550;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-links li:hover a {
+  color: #5e87eb;
+}
+
+.nav-links li::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 2%;
+  background-color: #5e87eb;
+  transition: width 0.3s ease;
+}
+
+.nav-links li:hover::after {
+  width: 80%;
+}
+
+.quote-button {
+  margin-left: auto; /* Ensures the button is pushed to the right */
+  /* Additional margin on the right */
+  padding: 10px 20px;
+  background-color: #602cdf;
+  color: white;
+  border: none;
+  border-radius: 20px; /* Rounded corners for the button */
+  transition: background-color 0.3s;
+  margin-right: 7rem;
+}
+
+.quote-button:hover {
+  background-color: #602cdf;
+}
+
+.menu-button {
+  display: none; /* Ensures it's not shown on large screens */
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #602cdf;
+  font-size: 24px;
+  margin-right: 1rem;
+}
+
+.menu-button:hover {
+  transform: rotate(90deg); /* Rotate effect on hover */
+}
+
+@media (max-width: 768px) {
+  .nav-links,
+  .quote-button {
+    display: none;
+  }
+  .logo {
+    margin-left: 1rem !important;
+  }
+  .menu-button {
+    display: block; /* Only display block on small screens */
+    margin-left: auto; /* Adjust to align properly */
+  }
+
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #fff;
+  }
+  .menu-button:hover {
+    transform: none;
+  }
+}
+
+/* Animation keyframes for the sliding effect */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
