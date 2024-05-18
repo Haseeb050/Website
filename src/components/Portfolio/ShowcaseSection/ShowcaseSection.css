@@ -1,0 +1,125 @@
+/* ShowcaseSection.css */
+.showcase-section {
+  padding: 50px 0;
+  background-color: #f8f9fa;
+}
+
+.showcase-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 15px;
+}
+.showcase-heading span {
+  text-align: center;
+  font-size: 17px;
+  font-weight: bold;
+  color: #602cdf;
+}
+.showcase-heading {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #333;
+}
+
+.showcase-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.showcase-item {
+  position: relative;
+  width: calc(33.333% - 10px);
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.showcase-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.showcase-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.showcase-item:hover .showcase-image {
+  transform: scale(1.1);
+}
+
+.showcase-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.showcase-item:hover .showcase-overlay {
+  opacity: 1;
+}
+
+.showcase-overlay-content {
+  text-align: center;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.showcase-item:hover .showcase-overlay-content {
+  transform: translateY(0);
+}
+
+.showcase-overlay-content h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #5e87eb;
+}
+
+.showcase-overlay-content p {
+  margin: 10px 0 20px;
+  font-size: 1rem;
+}
+
+.showcase-link {
+  font-size: 2rem;
+  color: #5e87eb;
+  display: inline-block;
+}
+
+.showcase-link span {
+  display: inline-block;
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.showcase-link:hover span {
+  transform: translateX(5px);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .showcase-item {
+    width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .showcase-item {
+    width: 100%;
+  }
+}

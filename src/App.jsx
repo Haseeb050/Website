@@ -1,31 +1,23 @@
+// src/App.js
 import React from "react";
-import HeroSection from "./components/Hero/Hero";
-import Navbar from "./components/Header/Nav";
-import Services from "./components/Services/Services";
-import WebsiteSolutions from "./components/WebsiteSolutions/WebsiteSolutions";
-import Expert from "./components/Expert/Expert";
-import CounterSection from "./components/CounterSection/CounterSection";
-import TeamSection from "./components/TeamMember/teamMembers";
-import ClientCarousel from "./components/Testimonials/ClientCarousel";
-import ContactSection from "./components/ContactSection/ContactSection";
-import PortfolioSection from "./components/PortfolioSection/PortfolioSection";
-import Footer from "./components/Footer/Footer";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./Home";
+import About from "./About";
+import Services from "./Services";
+import Portfolio from "./Portfolio";
 
 const App = () => {
   return (
-    <div id="main">
-      <Navbar />
-      <HeroSection />
-      <Services />
-      <WebsiteSolutions />
-      <Expert />
-      <CounterSection />
-      <TeamSection />
-      <ClientCarousel />
-      <ContactSection />
-      <PortfolioSection />
-      <Footer />
-    </div>
+    <Router>
+      <div className="main-container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+        </Routes>
+      </div>
+    </Router>
   );
 };
 

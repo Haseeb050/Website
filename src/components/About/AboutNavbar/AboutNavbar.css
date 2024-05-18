@@ -1,0 +1,164 @@
+/* AboutNavbar.css */
+.about-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+  background: transparent; /* Initially transparent */
+}
+
+.about-navbar.sticky {
+  background: white; /* Change background to white when sticky */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-logo {
+  margin-left: 5rem;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.about-navbar.sticky .about-logo {
+  color: #0b1e44;
+}
+
+.about-nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-grow: 2;
+}
+
+.about-nav-links li {
+  padding: 0 23px;
+  padding-top: 15px;
+  position: relative;
+  transition: color 0.3s ease;
+  font-size: 16px;
+  font-weight: 550;
+}
+
+.about-nav-links li a {
+  text-decoration: none;
+  color: white;
+}
+
+.about-navbar.sticky .about-nav-links li a {
+  color: black;
+}
+
+.about-nav-links li:hover a {
+  color: white;
+}
+
+.about-nav-links li::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 2%;
+  background-color: #5e87eb;
+  transition: width 0.3s ease;
+}
+
+.about-nav-links li:hover::after {
+  width: 80%;
+}
+
+.about-quote-button {
+  margin-left: auto;
+  padding: 10px 20px;
+  background-color: #602cdf;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+  margin-right: 7rem;
+}
+
+.about-quote-button:hover {
+  background-color: #4a22ad;
+}
+
+.about-menu-button {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  margin-right: 1rem;
+}
+
+.about-navbar.sticky .about-menu-button {
+  color: #602cdf;
+}
+
+.about-menu-button:hover {
+  transform: rotate(90deg);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .about-nav-links,
+  .about-quote-button {
+    display: none;
+  }
+
+  .about-logo {
+    margin-left: 1rem;
+  }
+
+  .about-menu-button {
+    display: block;
+    margin-left: auto;
+  }
+
+  .about-nav-links.open {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #5e87eb;
+    color: white;
+    animation: slideIn 0.8s forwards;
+  }
+
+  .about-nav-links.open li {
+    padding: 15px 20px;
+    border-bottom: 1px solid white !important;
+    text-align: left;
+  }
+
+  .about-nav-links.open li:last-child {
+    border-bottom: none;
+  }
+
+  .about-nav-links.open .about-quote-button {
+    display: block;
+    margin: 15px 20px;
+    text-align: left;
+  }
+}
+
+/* Animation keyframes for the sliding effect */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

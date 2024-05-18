@@ -1,0 +1,148 @@
+/* AboutSectionComponent.css */
+.about-section {
+  padding: 50px;
+  background-color: #f8f9fa;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.about-text {
+  flex: 1;
+  text-align: left;
+}
+
+.about-heading {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.about-highlight {
+  color: #602cdf;
+}
+
+.about-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.about-skills {
+  text-align: left;
+}
+
+.about-skill {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.about-skill span {
+  width: 150px;
+  font-size: 1rem;
+}
+
+.about-progress {
+  flex-grow: 1;
+  height: 10px;
+  background-color: #e9ecef;
+  margin: 0 10px;
+  position: relative;
+}
+
+.about-progress-bar {
+  height: 100%;
+  background-color: #602cdf;
+  width: 0;
+  transition: width 2s ease;
+}
+
+.about-percentage {
+  font-size: 1rem;
+}
+
+.about-image {
+  flex: 1;
+  text-align: right;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 0 10px;
+  }
+
+  .about-heading {
+    font-size: 2rem;
+  }
+
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .about-skill {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about-skill span {
+    width: 100%;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+  }
+
+  .about-progress {
+    margin: 0;
+    width: 100%;
+  }
+
+  .about-percentage {
+    margin-top: 5px;
+    align-self: flex-end;
+  }
+
+  .about-image {
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-heading {
+    font-size: 1.8rem;
+  }
+
+  .about-description {
+    font-size: 0.9rem;
+  }
+
+  .about-skill span {
+    font-size: 1rem;
+  }
+
+  .about-percentage {
+    font-size: 0.9rem;
+  }
+}
