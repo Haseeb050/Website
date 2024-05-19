@@ -58,12 +58,12 @@
 }
 
 .quote-button {
-  margin-left: auto; /* Ensures the button is pushed to the right */
+  margin-left: auto;
   padding: 10px 20px;
   background-color: #602cdf;
   color: white;
   border: none;
-  border-radius: 20px; /* Rounded corners for the button */
+  border-radius: 0 0 0 15px;
   transition: background-color 0.3s;
   margin-right: 7rem;
 }
@@ -73,7 +73,7 @@
 }
 
 .menu-button {
-  display: none; /* Ensures it's not shown on large screens */
+  display: none;
   cursor: pointer;
   background: none;
   border: none;

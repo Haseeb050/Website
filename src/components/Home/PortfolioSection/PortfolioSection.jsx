@@ -1,9 +1,11 @@
+// src/components/PortfolioSection.js
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./PortfolioSection.css";
 import blog from "../../../../public/blog.jpg";
 import blog1 from "../../../../public/blog1.jpg";
+import { Link } from "react-router-dom";
 
 const projects = [
   {
@@ -84,16 +86,20 @@ const PortfolioSection = () => {
             />
             <h3 className="portfolio-title">{project.title}</h3>
             <p className="portfolio-description">{project.description}</p>
-            <button className="portfolio-button">Read More</button>
+            <Link to="/portfolio" className="portfolio-button">
+              Read More
+            </Link>
           </div>
         ))}
       </div>
-      <button
-        className="see-more-button"
-        data-aos="fade-up"
-        data-aos-delay="700">
-        See More
-      </button>
+      <Link to="/portfolio">
+        <button
+          className="see-more-button"
+          data-aos="fade-up"
+          data-aos-delay="700">
+          See More
+        </button>
+      </Link>
     </div>
   );
 };

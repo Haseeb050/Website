@@ -1,6 +1,8 @@
+// src/components/ContactSection.js
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 import "./ContactSection.css"; // Make sure to create this CSS file
 
 const ContactSection = () => {
@@ -26,14 +28,16 @@ const ContactSection = () => {
 
   return (
     <div className="contact-section" data-aos="zoom-in">
-      <div className="overlay" data-aos="zoom-out ">
+      <div className="overlay" data-aos="zoom-out">
         <h1>Digital Solution For Your Business</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud consectetur.
         </p>
-        <button>Contact Us</button>
+        <Link to="/contact">
+          <button>Contact Us</button>
+        </Link>
       </div>
     </div>
   );

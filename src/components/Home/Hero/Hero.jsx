@@ -1,6 +1,8 @@
+// src/components/HeroSection.js
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 import "./Hero.css";
 import hero from "../../../../public/hero.png";
 
@@ -39,8 +41,12 @@ function HeroSection() {
           aliqua.
         </p>
         <div className="hero-buttons" data-aos="fade-up" data-aos-delay="200">
-          <button className="button-3">Learn More</button>
-          <button className="button-2">Contact Us</button>
+          <Link className="button-link">
+            <button className="button-3">Learn More</button>
+          </Link>
+          <Link to="/contact" className="button-link">
+            <button className="button-2">Contact Us</button>
+          </Link>
         </div>
       </div>
       <div className="hero-image" data-aos="fade-left">

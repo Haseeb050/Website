@@ -1,0 +1,73 @@
+/* AboutHeroSection.css */
+.about-hero-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh; /* Full viewport height */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  z-index: 0; /* Ensure hero section is below navbar */
+}
+.home-link {
+  color: white;
+  text-decoration: none !important; /* Force remove the underline */
+  transition: color 0.3s ease;
+  margin-right: 5px;
+}
+.home-link:hover {
+  color: #602cdf;
+}
+.about-hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+  z-index: 1; /* Ensure overlay is above the background image */
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 2; /* Ensure content is above the overlay */
+  max-width: 600px;
+}
+
+.about-hero-content h1 {
+  font-size: 3rem;
+}
+
+.about-hero-content p {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-hero-content p {
+    font-size: 0.9rem;
+  }
+  .about-hero-section {
+    height: 55vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero-content h1 {
+    font-size: 2rem;
+  }
+  .about-hero-section {
+    height: 45vh;
+  }
+  .about-hero-content p {
+    font-size: 0.8rem;
+  }
+}
