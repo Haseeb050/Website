@@ -47,7 +47,7 @@ function ServicesPage() {
             eiusmod tempor incididunt ut labore et dolore magna aliqua enim
             minim.
           </p>
-          <a href="#">Read More</a>
+          <a href="/servicesDetails">Read More</a>
         </div>
         <div className="page-card" data-aos="fade-up" data-aos-delay="200">
           <FaCode className="page-icon" />
@@ -57,7 +57,7 @@ function ServicesPage() {
             eiusmod tempor incididunt ut labore et dolore magna aliqua enim
             minim.
           </p>
-          <a href="#">Read More</a>
+          <a href="/servicesDetails">Read More</a>
         </div>
         <div className="page-card" data-aos="fade-up" data-aos-delay="400">
           <FaNetworkWired className="page-icon" />
@@ -67,7 +67,7 @@ function ServicesPage() {
             eiusmod tempor incididunt ut labore et dolore magna aliqua enim
             minim.
           </p>
-          <a href="#">Read More</a>
+          <a href="/servicesDetails">Read More</a>
         </div>
         <div className="page-card" data-aos="zoom-in" data-aos-delay="700">
           <FaServer className="page-icon" />
@@ -77,7 +77,7 @@ function ServicesPage() {
             eiusmod tempor incididunt ut labore et dolore magna aliqua enim
             minim.
           </p>
-          <a href="#">Read More</a>
+          <a href="/servicesDetails">Read More</a>
         </div>
         <div className="page-card" data-aos="zoom-in" data-aos-delay="600">
           <FaDatabase className="page-icon" />
@@ -87,7 +87,7 @@ function ServicesPage() {
             eiusmod tempor incididunt ut labore et dolore magna aliqua enim
             minim.
           </p>
-          <a href="#">Read More</a>
+          <a href="/servicesDetails">Read More</a>
         </div>
         <div className="page-card" data-aos="zoom-in" data-aos-delay="1000">
           <FaCloud className="page-icon" />
@@ -97,7 +97,7 @@ function ServicesPage() {
             eiusmod tempor incididunt ut labore et dolore magna aliqua enim
             minim.
           </p>
-          <a href="#">Read More</a>
+          <a href="/servicesDetails">Read More</a>
         </div>
       </div>
     </div>

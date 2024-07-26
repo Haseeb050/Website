@@ -1,33 +1,12 @@
 import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 import "./Footer.css";
 
 const Footer = () => {
-  useEffect(() => {
-    AOS.init({
-      disable: false,
-      startEvent: "DOMContentLoaded",
-      initClassName: "aos-init",
-      animatedClassName: "aos-animate",
-      useClassNames: false,
-      disableMutationObserver: false,
-      debounceDelay: 50,
-      throttleDelay: 99,
-      offset: 120,
-      delay: 0,
-      duration: 400,
-      easing: "ease",
-      once: false,
-      mirror: false,
-      anchorPlacement: "top-bottom",
-    });
-  }, []);
-
   return (
     <footer className="footer">
-      <div className="footer-content" data-aos="fade-up" data-aos-delay="400">
-        <div className="footer-logo" data-aos="fade-up">
+      <div className="footer-content">
+        <div className="footer-logo">
           <h2>TECHMAX</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

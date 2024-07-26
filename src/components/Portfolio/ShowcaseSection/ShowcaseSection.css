@@ -1,4 +1,4 @@
-/* ShowcaseSection.css */
+/* Showcase Section Styles */
 .showcase-section {
   padding: 50px 0;
   background-color: #f8f9fa;
@@ -10,12 +10,13 @@
   text-align: center;
   padding: 0 15px;
 }
+
 .showcase-heading span {
-  text-align: center;
   font-size: 17px;
   font-weight: bold;
   color: #602cdf;
 }
+
 .showcase-heading {
   font-size: 2.5rem;
   margin-bottom: 50px;
@@ -111,15 +112,117 @@
   transform: translateX(5px);
 }
 
-/* Responsive Design */
+/* Modal Styles */
+.project-overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed; /* Ensure full-screen overlay */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-modal {
+  width: 80%;
+  max-width: 900px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative; /* For positioning the close button */
+}
+
+.project-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.modal-image {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.close-modal-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  background-color: black;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.close-modal-button:hover {
+  background-color: #e74c3c;
+}
+
+.no-images-message {
+  text-align: center;
+  font-size: 1rem;
+  color: #777;
+  margin-top: 20px;
+}
+
+/* Responsive Styles */
 @media (max-width: 992px) {
   .showcase-item {
     width: calc(50% - 10px);
+  }
+
+  .project-modal {
+    width: 90%;
+  }
+
+  .modal-image {
+    max-width: 150px;
   }
 }
 
 @media (max-width: 768px) {
   .showcase-item {
     width: 100%;
+  }
+
+  .project-modal {
+    width: 95%;
+  }
+
+  .modal-image {
+    max-width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .showcase-heading {
+    font-size: 1.5rem;
+  }
+
+  .project-modal {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .modal-image {
+    max-width: 80px;
+  }
+
+  .close-modal-button {
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    text-align: center;
   }
 }

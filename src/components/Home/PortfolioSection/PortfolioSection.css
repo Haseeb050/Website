@@ -57,10 +57,11 @@
 }
 
 .portfolio-title {
-  font-size: 1.2rem;
-  margin: 10px;
+  font-size: 1.4rem;
+  margin: 20px;
   color: black;
-  text-align: left;
+
+  text-align: center;
 }
 
 .portfolio-description {
@@ -80,8 +81,8 @@
   transition: background-color 0.3s ease;
   margin: 10px 15px 20px 15px;
   display: inline-block;
-  text-decoration: none; /* Ensure no underline */
-  z-index: 2; /* Ensure button is on top */
+  text-decoration: none;
+  z-index: 2;
   position: relative;
 }
 

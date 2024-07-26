@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 import "./Nav.css";
 
 function Navbar() {
@@ -13,19 +14,29 @@ function Navbar() {
       <div className="logo">TECHMAX</div>
       <ul className={`nav-links ${isOpen ? "open" : ""}`}>
         <li>
-          <a href="/">Home</a>
+          <Link to="/" onClick={toggleMenu}>
+            Home
+          </Link>
         </li>
         <li>
-          <a href="/about">About Us</a>
+          <Link to="/about" onClick={toggleMenu}>
+            About Us
+          </Link>
         </li>
         <li>
-          <a href="/services">Services</a>
+          <Link to="/services" onClick={toggleMenu}>
+            Services
+          </Link>
         </li>
         <li>
-          <a href="/portfolio">Portfolio</a>
+          <Link to="/portfolio" onClick={toggleMenu}>
+            Portfolio
+          </Link>
         </li>
         <li>
-          <a href="/contact">Contact</a>
+          <Link to="/contact" onClick={toggleMenu}>
+            Contact
+          </Link>
         </li>
       </ul>
       <button className="quote-button">Get Quotes</button>
